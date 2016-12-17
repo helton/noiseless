@@ -28,7 +28,7 @@ function setButtonEvents() {
 
   images.forEach(image => {
     image.addEventListener("click", event => {
-      const key = image.parentElement.attributes["data-key"].value
+      const key = image.parentElement.dataset.key
 
       image.classList.toggle("active")
       const slider = document.querySelector(`div[data-key="${key}"] > input[type="range"]`)
@@ -54,7 +54,7 @@ function setButtonEvents() {
     buttonMute.classList.toggle("fa-volume-up")
     buttonMute.classList.toggle("fa-volume-off")
 
-    const audios = document.querySelectorAll("audio");
+    const audios = document.querySelectorAll("audio")
     audios.forEach(audio => {
       audio.muted = !audio.muted
     })
@@ -62,7 +62,7 @@ function setButtonEvents() {
 }
 
 function setBackgroundChange() {
-  changeBackgroundColor();
+  changeBackgroundColor()
   setInterval(changeBackgroundColor, 10000)
 }
 
