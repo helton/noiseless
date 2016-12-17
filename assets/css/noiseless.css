@@ -12,7 +12,9 @@ body {
 }
 
 img {
-  background-color: inherit;
+  width: 100px;
+  padding: 50px;
+  opacity: 0.5;
 }
 
 h1 {
@@ -64,8 +66,10 @@ button:hover, button:active, img:hover, img:active {
   padding-bottom: 2em;
 }
 
-img {
-  width: 100px;
-  padding: 50px;
-  opacity: 0.5;
+input[type="range"] {
+  visibility: hidden;
+}
+
+input[type="range"].slider-active {
+  visibility: visible;
 }

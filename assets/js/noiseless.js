@@ -3,10 +3,10 @@ function getRandomColorChannel() {
 }
 
 function getRandomColor() {
-  const r = getRandomColorChannel()
-  const g = getRandomColorChannel()
-  const b = getRandomColorChannel()
-  return "rgb(" + r + "," + g + "," + b + ")"
+  const red = getRandomColorChannel()
+  const green = getRandomColorChannel()
+  const blue = getRandomColorChannel()
+  return `rgb(${red},${green},${blue})`
 }
 
 function changeBackgroundColor() {
@@ -15,15 +15,39 @@ function changeBackgroundColor() {
 }
 
 function setButtonEvents() {
-  const buttons = Array.prototype.slice.call(document.querySelectorAll("button"))
-  const images = Array.prototype.slice.call(document.querySelectorAll("img"))
-  const toggleElement = element => {
-    element.addEventListener("click", event => {
-      element.classList.toggle("active")
+  const buttons = document.querySelectorAll("button")
+  const images = document.querySelectorAll("img")
+  const sliders = document.querySelectorAll(`input[type="range"]`)
+
+  buttons.forEach(button => {
+    button.addEventListener("click", event => {
+      button.classList.toggle("active")
     })
-  }
-  buttons.forEach(toggleElement);
-  images.forEach(toggleElement);
+  })
+
+  images.forEach(image => {
+    image.addEventListener("click", event => {
+      const key = image.parentElement.attributes["data-key"].value
+
+      image.classList.toggle("active")
+      const slider = document.querySelector(`div[data-key="${key}"] > input[type="range"]`)
+      slider.classList.toggle("slider-active")
+
+      const audio = document.querySelector(`audio[data-key="${key}"]`)
+      if (audio)
+        audio.paused ? audio.play() : audio.pause()
+    })
+  })
+
+  sliders.forEach(slider => {
+    slider.addEventListener("input", event => {
+      const key = slider.parentElement.attributes["data-key"].value
+
+      const audio = document.querySelector(`audio[data-key="${key}"]`)
+      if (audio)
+        audio.volume = slider.value / (slider.max - slider.min)
+    })
+  })
 }
 
 function setBackgroundChange() {

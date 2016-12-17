@@ -27,24 +27,89 @@
     </div>
 
     <div id="sound-types" class="flex-container flex-item">
-      <img src="assets/images/rain.png" alt="Rain" title="Rain" class="flex-item">
-      <img src="assets/images/thunderstorm.png" alt="Thunderstorm" title="Thunderstorm" class="flex-item">
-      <img src="assets/images/wind.png" alt="Wind" title="Wind" class="flex-item">
-      <img src="assets/images/forest.png" alt="Forest" title="Forest" class="flex-item">
-      <img src="assets/images/leaves.png" alt="Leaves" title="Leaves" class="flex-item">
-      <img src="assets/images/waterstream.png" alt="Water Stream" title="Water Stream" class="flex-item">
-      <img src="assets/images/seaside.png" alt="Seaside" title="Seaside" class="flex-item">
-      <img src="assets/images/water.png" alt="Water" title="Water" class="flex-item">
-      <img src="assets/images/fire.png" alt="Fire" title="Fire" class="flex-item">
-      <img src="assets/images/summernight.png" alt="Summer Night" title="Summer Night" class="flex-item">
-      <img src="assets/images/coffee.png" alt="Coffee" title="Coffee" class="flex-item">
-      <img src="assets/images/train.png" alt="Train" title="Train" class="flex-item">
-      <img src="assets/images/fan.png" alt="Fan" title="Fan" class="flex-item">
-      <img src="assets/images/whitenoise.png" alt="White noise" title="White noise" class="flex-item">
-      <img src="assets/images/pinknoise.png" alt="Pink noise" title="Pink noise" class="flex-item">
-      <img src="assets/images/brownnoise.png" alt="Brown noise" title="Brown noise" class="flex-item">
+      <div data-key="rain" class="flex-container flex-item">
+        <img src="assets/images/rain.png" alt="Rain" title="Rain" class="flex-item">
+        <input type="range" min="0" max="100" class="flex-item">
+      </div>
+      <div data-key="thunderstorm" class="flex-container flex-item">
+        <img src="assets/images/thunderstorm.png" alt="Thunderstorm" title="Thunderstorm" class="flex-item">
+        <input type="range" min="0" max="100" class="flex-item">
+      </div>
+      <div data-key="wind" class="flex-container flex-item">
+        <img src="assets/images/wind.png" alt="Wind" title="Wind" class="flex-item">
+        <input type="range" min="0" max="100" class="flex-item">
+      </div>
+      <div data-key="forest" class="flex-container flex-item">
+        <img src="assets/images/forest.png" alt="Forest" title="Forest" class="flex-item">
+        <input type="range" min="0" max="100" class="flex-item">
+      </div>
+      <div data-key="leaves" class="flex-container flex-item">
+        <img src="assets/images/leaves.png" alt="Leaves" title="Leaves" class="flex-item">
+        <input type="range" min="0" max="100" class="flex-item">
+      </div>
+      <div data-key="waterstream" class="flex-container flex-item">
+        <img src="assets/images/waterstream.png" alt="Water Stream" title="Water Stream" class="flex-item">
+        <input type="range" min="0" max="100" class="flex-item">
+      </div>
+      <div data-key="seaside" class="flex-container flex-item">
+        <img src="assets/images/seaside.png" alt="Seaside" title="Seaside" class="flex-item">
+        <input type="range" min="0" max="100" class="flex-item">
+      </div>
+      <div data-key="water" class="flex-container flex-item">
+        <img src="assets/images/water.png" alt="Water" title="Water" class="flex-item">
+        <input type="range" min="0" max="100" class="flex-item">
+      </div>
+      <div data-key="fire" class="flex-container flex-item">
+        <img src="assets/images/fire.png" alt="Fire" title="Fire" class="flex-item">
+        <input type="range" min="0" max="100" class="flex-item">
+      </div>
+      <div data-key="summernight" class="flex-container flex-item">
+        <img src="assets/images/summernight.png" alt="Summer Night" title="Summer Night" class="flex-item">
+        <input type="range" min="0" max="100" class="flex-item">
+      </div>
+      <div data-key="coffee" class="flex-container flex-item">
+        <img src="assets/images/coffee.png" alt="Coffee" title="Coffee" class="flex-item">
+        <input type="range" min="0" max="100" class="flex-item">
+      </div>
+      <div data-key="train" class="flex-container flex-item">
+        <img src="assets/images/train.png" alt="Train" title="Train" class="flex-item">
+        <input type="range" min="0" max="100" class="flex-item">
+      </div>
+      <div data-key="fan" class="flex-container flex-item">
+        <img src="assets/images/fan.png" alt="Fan" title="Fan" class="flex-item">
+        <input type="range" min="0" max="100" class="flex-item">
+      </div>
+      <div data-key="whitenoise" class="flex-container flex-item">
+        <img src="assets/images/whitenoise.png" alt="White noise" title="White noise" class="flex-item">
+        <input type="range" min="0" max="100" class="flex-item">
+      </div>
+      <div data-key="pinknoise" class="flex-container flex-item">
+        <img src="assets/images/pinknoise.png" alt="Pink noise" title="Pink noise" class="flex-item">
+        <input type="range" min="0" max="100" class="flex-item">
+      </div>
+      <div data-key="brownnoise" class="flex-container flex-item">
+        <img src="assets/images/brownnoise.png" alt="Brown noise" title="Brown noise" class="flex-item">
+        <input type="range" min="0" max="100" class="flex-item">
+      </div>
     </div>
   </div>
+
+  <audio data-key="rain" src="assets/sounds/rain.ogg" loop></audio>
+  <audio data-key="thunderstorm" src="assets/sounds/thunderstorm.ogg" loop></audio>
+  <audio data-key="wind" src="assets/sounds/wind.ogg" loop></audio>
+  <audio data-key="forest" src="assets/sounds/forest.ogg" loop></audio>
+  <audio data-key="leaves" src="assets/sounds/leaves.ogg" loop></audio>
+  <audio data-key="waterstream" src="assets/sounds/waterstream.ogg" loop></audio>
+  <audio data-key="seaside" src="assets/sounds/seaside.ogg" loop></audio>
+  <audio data-key="water" src="assets/sounds/water.ogg" loop></audio>
+  <audio data-key="fire" src="assets/sounds/fire.ogg" loop></audio>
+  <audio data-key="summernight" src="assets/sounds/summernight.ogg" loop></audio>
+  <audio data-key="coffee" src="assets/sounds/coffee.ogg" loop></audio>
+  <audio data-key="train" src="assets/sounds/train.ogg" loop></audio>
+  <audio data-key="fan" src="assets/sounds/fan.ogg" loop></audio>
+  <audio data-key="whitenoise" src="assets/sounds/whitenoise.ogg" loop></audio>
+  <audio data-key="pinknoise" src="assets/sounds/pinknoise.ogg" loop></audio>
+  <audio data-key="brownnoise" src="assets/sounds/brownnoise.ogg" loop></audio>
 
   <script src="assets/js/noiseless.js" charset="utf-8"></script>
 </body>
