@@ -26,7 +26,7 @@ button {
   background: rgba(255, 255, 255, 0.25);
   border-style: none;
   border-radius: 25px;
-  color: white;
+  color: inherit;
   font-size: 20px;
   padding: 0.5em 1.2em;
   outline: none;
@@ -36,6 +36,14 @@ button {
 
 button:hover, button:active, img:hover, img:active {
   cursor: pointer;
+}
+
+input[type="range"] {
+  visibility: hidden;
+}
+
+input[type="range"].slider-active {
+  visibility: visible;
 }
 
 .active {
@@ -66,10 +74,9 @@ button:hover, button:active, img:hover, img:active {
   padding-bottom: 2em;
 }
 
-input[type="range"] {
-  visibility: hidden;
-}
-
-input[type="range"].slider-active {
-  visibility: visible;
+#btn-mute {
+  text-align: center;
+  font-size: 2em;
+  width: 100px;
+  margin-bottom: 20px;
 }

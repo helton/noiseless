@@ -15,9 +15,10 @@ function changeBackgroundColor() {
 }
 
 function setButtonEvents() {
-  const buttons = document.querySelectorAll("button")
+  const buttons = document.querySelectorAll("#buttons > button")
   const images = document.querySelectorAll("img")
   const sliders = document.querySelectorAll(`input[type="range"]`)
+  const buttonMute = document.querySelector("#btn-mute")
 
   buttons.forEach(button => {
     button.addEventListener("click", event => {
@@ -46,6 +47,16 @@ function setButtonEvents() {
       const audio = document.querySelector(`audio[data-key="${key}"]`)
       if (audio)
         audio.volume = slider.value / (slider.max - slider.min)
+    })
+  })
+
+  buttonMute.addEventListener("click", event => {
+    buttonMute.classList.toggle("fa-volume-up")
+    buttonMute.classList.toggle("fa-volume-off")
+
+    const audios = document.querySelectorAll("audio");
+    audios.forEach(audio => {
+      audio.muted = !audio.muted
     })
   })
 }
