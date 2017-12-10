@@ -14,7 +14,7 @@ body {
 img {
   width: 100px;
   padding: 50px;
-  opacity: 0.5;
+  opacity: 0.15;
 }
 
 h1 {
@@ -44,11 +44,6 @@ input[type="range"] {
 
 input[type="range"].slider-active {
   visibility: visible;
-}
-
-.active {
-  opacity: 1;
-  font-weight: bold;
 }
 
 .flex-container {
